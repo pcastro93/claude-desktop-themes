@@ -2,17 +2,17 @@
 
 Color themes and code font size for the Claude Desktop app, applied from DevTools.
 
-| Theme | Folder |
-|---|---|
-| Ayu Dark | `themes/ayu-dark/` |
-| Catppuccin Mocha | `themes/catppuccin-mocha/` |
-| Dracula | `themes/dracula/` |
-| Monokai | `themes/monokai/` |
-| One Dark Pro | `themes/one-dark-pro/` |
-| Slack Dark (Slack-inspired, unofficial) | `themes/slack-dark/` |
-| Solarized Dark | `themes/solarized-dark/` |
-| Solarized Light | `themes/solarized-light/` |
-| Tokyo Night | `themes/tokyo-night/` |
+| Theme | Folder | Snippet |
+|---|---|---|
+| Ayu Dark | [`themes/ayu-dark/`](themes/ayu-dark/) | [`apply-theme.js`](themes/ayu-dark/apply-theme.js) |
+| Catppuccin Mocha | [`themes/catppuccin-mocha/`](themes/catppuccin-mocha/) | [`apply-theme.js`](themes/catppuccin-mocha/apply-theme.js) |
+| Dracula | [`themes/dracula/`](themes/dracula/) | [`apply-theme.js`](themes/dracula/apply-theme.js) |
+| Monokai | [`themes/monokai/`](themes/monokai/) | [`apply-theme.js`](themes/monokai/apply-theme.js) |
+| One Dark Pro | [`themes/one-dark-pro/`](themes/one-dark-pro/) | [`apply-theme.js`](themes/one-dark-pro/apply-theme.js) |
+| Slack Dark (Slack-inspired, unofficial) | [`themes/slack-dark/`](themes/slack-dark/) | [`apply-theme.js`](themes/slack-dark/apply-theme.js) |
+| Solarized Dark | [`themes/solarized-dark/`](themes/solarized-dark/) | [`apply-theme.js`](themes/solarized-dark/apply-theme.js) |
+| Solarized Light | [`themes/solarized-light/`](themes/solarized-light/) | [`apply-theme.js`](themes/solarized-light/apply-theme.js) |
+| Tokyo Night | [`themes/tokyo-night/`](themes/tokyo-night/) | [`apply-theme.js`](themes/tokyo-night/apply-theme.js) |
 
 ## Screenshots
 
