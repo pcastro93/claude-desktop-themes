@@ -38,7 +38,7 @@ Do this once. The example uses Dracula; for another theme, swap `dracula` for it
 
 DevTools keeps the snippet between sessions. Repeat step 3 for each theme you want available.
 
-## Use a theme
+## Reapply after each launch
 Snippets don't run automatically (the app has no startup hook), so after each launch:
 
 1. Press **Ctrl+Alt+I** (macOS: **Cmd+Option+I**) to open DevTools.
