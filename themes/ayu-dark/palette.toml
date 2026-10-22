@@ -1,0 +1,30 @@
+# Palette format: see ../../generator/PALETTE.md. Colors are "#rrggbb"; role picks may name a hue or ramp key instead.
+# Ayu Dark (https://github.com/ayu-theme/ayu-colors, current 2023+ "dark" variant: bg #0b0e14, panel #0d1017).
+# Ayu has no magenta; magenta is a soft pink invented to sit between red and violet.
+name = "Ayu Dark"
+mode = "dark"
+# Neutral ramp, page background -> strongest contrast (dark to light in a dark theme)
+bg = "#0b0e14"
+bg_alt = "#0d1017"
+border = "#151a23"
+border_strong = "#232834"
+fg_subtle = "#464b57"
+fg_muted = "#7b8190"
+fg_secondary = "#a0a29d"
+fg = "#bfbdb6"
+fg_strong = "#e6e1cf"
+ink = "#f3f0e4"
+on_color = "#0b0e14"  # dark text on bright fills
+# Role picks
+accent = "yellow"
+brand = "orange"
+pro = "violet"
+success = "green"
+warning = "orange"
+danger = "red"
+primary_button = "yellow"
+primary_button_hover = "#ffb454"
+on_primary = "#0b0e14"
+hues = { red = "#f07178", orange = "#ff8f40", yellow = "#e6b450", green = "#aad94c", aqua = "#95e6cb", blue = "#59c2ff", violet = "#d2a6ff", magenta = "#f29fc0" }
+# Code blocks: font size (bare numbers = px) and optional unitless line height
+code_font_size = "13.5px"

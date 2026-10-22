@@ -1,0 +1,30 @@
+# Palette format: see ../../generator/PALETTE.md. Colors are "#rrggbb"; role picks may name a hue or ramp key instead.
+# Slack Dark: inspired by Slack's dark mode, NOT an official Slack theme. Slack publishes no palette, so these are
+# commonly seen UI colors (#1a1d21 message pane, #19171d sidebar, #d1d2d3 text, #1d9bd1 links) plus the brand colors.
+name = "Slack Dark"
+mode = "dark"
+# Neutral ramp, page background -> strongest contrast (dark to light in a dark theme)
+bg = "#1a1d21"
+bg_alt = "#19171d"
+border = "#35373b"
+border_strong = "#4a4c50"
+fg_subtle = "#6b6d71"
+fg_muted = "#9a9b9e"
+fg_secondary = "#ababad"
+fg = "#d1d2d3"
+fg_strong = "#f4f4f5"
+ink = "#ffffff"
+on_color = "#1a1d21"  # dark text on bright accent/status fills
+# Role picks
+accent = "blue"
+brand = "magenta"
+pro = "violet"
+success = "green"
+warning = "yellow"
+danger = "red"
+primary_button = "#007a5a"  # Slack's green button
+primary_button_hover = "#148567"
+on_primary = "#ffffff"
+hues = { red = "#e01e5a", orange = "#f2813a", yellow = "#ecb22e", green = "#2bac76", aqua = "#36c5f0", blue = "#1d9bd1", violet = "#8e5bd0", magenta = "#c7478f" }
+# Code blocks: font size (bare numbers = px) and optional unitless line height
+code_font_size = "13.5px"

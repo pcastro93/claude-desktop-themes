@@ -1,0 +1,33 @@
+# Palette format: see ../../generator/PALETTE.md. Colors are "#rrggbb"; role picks may name a hue or ramp key instead.
+name = "Solarized Light"
+mode = "light"
+# Neutral ramp, page background -> strongest contrast
+bg = "#fdf6e3"
+bg_alt = "#eee8d5"
+border = "#e4ddc8"
+border_strong = "#d9d2bc"
+fg_subtle = "#93a1a1"
+fg_muted = "#839496"
+fg_secondary = "#657b83"
+fg = "#586e75"
+fg_strong = "#073642"
+ink = "#002b36"
+on_color = "#fdf6e3"  # text on saturated fills (accent, danger, ...)
+# Role picks
+accent = "blue"
+brand = "orange"
+pro = "violet"
+success = "green"
+warning = "yellow"
+danger = "red"
+primary_button = "fg_strong"
+primary_button_hover = "fg"
+on_primary = "bg"
+hues = { red = "#dc322f", orange = "#cb4b16", yellow = "#b58900", green = "#859900", aqua = "#2aa198", blue = "#268bd2", violet = "#6c71c4", magenta = "#d33682" }
+# Optional exact hover-fill / text colors per hue (default: derived by mixing toward ink)
+hue_hover = { red = "#c42a28", orange = "#b4420f", yellow = "#9e7600", green = "#748600", blue = "#1f78b6", violet = "#5c61b0" }
+hue_text = { red = "#b02524", orange = "#a13a0f", yellow = "#7d5e00", green = "#5f6e00", aqua = "#1d7a73", blue = "#1a6a9e", violet = "#4f54a0", magenta = "#a82a69" }
+# Optional: exact per-variable values (hex is auto-converted for H S% L% triplet variables)
+override = { "--accent-pro-200" = "#9a9ed8", "--cds-fizzy-lake-color-card-hover" = "#e8e1cb", "--cds-gray-850" = "#00303b", "--danger-000" = "#a02320", "--df-z4" = "#c9c4ae", "--pictogram-400" = "#f6efdb", "--warning-000" = "#6b5000" }
+# Code blocks: font size (bare numbers = px) and optional unitless line height
+code_font_size = "13.5px"

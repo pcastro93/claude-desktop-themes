@@ -1,0 +1,28 @@
+# Palette format: see ../../generator/PALETTE.md. Colors are "#rrggbb"; role picks may name a hue or ramp key instead.
+name = "Solarized Dark"
+mode = "dark"
+# Neutral ramp, page background -> strongest contrast (dark to light in a dark theme)
+bg = "#002b36"
+bg_alt = "#073642"
+border = "#0d3f4c"
+border_strong = "#17505d"
+fg_subtle = "#475f67"
+fg_muted = "#586e75"
+fg_secondary = "#839496"
+fg = "#93a1a1"
+fg_strong = "#eee8d5"
+ink = "#fdf6e3"
+on_color = "#fdf6e3"  # text on saturated fills (accent, danger, ...)
+# Role picks
+accent = "blue"
+brand = "orange"
+pro = "violet"
+success = "green"
+warning = "yellow"
+danger = "red"
+primary_button = "fg_strong"
+primary_button_hover = "#cecfc3"
+on_primary = "bg"
+hues = { red = "#dc322f", orange = "#cb4b16", yellow = "#b58900", green = "#859900", aqua = "#2aa198", blue = "#268bd2", violet = "#6c71c4", magenta = "#d33682" }
+# Code blocks: font size (bare numbers = px) and optional unitless line height
+code_font_size = "13.5px"

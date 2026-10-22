@@ -1,0 +1,29 @@
+# Palette format: see ../../generator/PALETTE.md. Colors are "#rrggbb"; role picks may name a hue or ramp key instead.
+# One Dark Pro (https://github.com/Binaryify/OneDark-Pro). One Dark has no magenta; magenta is a pink between red and purple.
+name = "One Dark Pro"
+mode = "dark"
+# Neutral ramp, page background -> strongest contrast (dark to light in a dark theme)
+bg = "#282c34"
+bg_alt = "#21252b"
+border = "#3a3f4b"
+border_strong = "#4b5263"
+fg_subtle = "#5c6370"
+fg_muted = "#8d93a0"
+fg_secondary = "#9da5b4"
+fg = "#abb2bf"
+fg_strong = "#d7dae0"
+ink = "#ffffff"
+on_color = "#21252b"  # dark text on bright pastel fills
+# Role picks
+accent = "blue"
+brand = "orange"
+pro = "violet"
+success = "green"
+warning = "yellow"
+danger = "red"
+primary_button = "blue"
+primary_button_hover = "#7ec0f5"
+on_primary = "#21252b"
+hues = { red = "#e06c75", orange = "#d19a66", yellow = "#e5c07b", green = "#98c379", aqua = "#56b6c2", blue = "#61afef", violet = "#c678dd", magenta = "#e06c9f" }
+# Code blocks: font size (bare numbers = px) and optional unitless line height
+code_font_size = "13.5px"

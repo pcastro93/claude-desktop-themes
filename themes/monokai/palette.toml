@@ -1,0 +1,30 @@
+# Palette format: see ../../generator/PALETTE.md. Colors are "#rrggbb"; role picks may name a hue or ramp key instead.
+# Monokai (classic Sublime Text / TextMate). Monokai has no real blue or separate red: blue is a softened sky blue between
+# cyan and purple, and red is a warm coral-red kept apart from the signature pink (magenta = #f92672).
+name = "Monokai"
+mode = "dark"
+# Neutral ramp, page background -> strongest contrast (dark to light in a dark theme)
+bg = "#272822"
+bg_alt = "#1e1f1c"
+border = "#3e3d32"
+border_strong = "#49483e"
+fg_subtle = "#5c5b4d"
+fg_muted = "#999580"
+fg_secondary = "#cfcfc2"
+fg = "#f8f8f2"
+fg_strong = "#fcfcf8"
+ink = "#ffffff"
+on_color = "#272822"  # dark text on bright fills
+# Role picks
+accent = "aqua"
+brand = "orange"
+pro = "violet"
+success = "green"
+warning = "yellow"
+danger = "red"
+primary_button = "green"
+primary_button_hover = "#bff05a"
+on_primary = "#272822"
+hues = { red = "#ff5f57", orange = "#fd971f", yellow = "#e6db74", green = "#a6e22e", aqua = "#66d9ef", blue = "#5f9df0", violet = "#ae81ff", magenta = "#f92672" }
+# Code blocks: font size (bare numbers = px) and optional unitless line height
+code_font_size = "13.5px"

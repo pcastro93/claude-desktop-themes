@@ -1,0 +1,29 @@
+# Palette format: see ../../generator/PALETTE.md. Colors are "#rrggbb"; role picks may name a hue or ramp key instead.
+# Dracula (https://draculatheme.com/contribute). Dracula has no blue; blue is a periwinkle between purple and cyan.
+name = "Dracula"
+mode = "dark"
+# Neutral ramp, page background -> strongest contrast (dark to light in a dark theme)
+bg = "#282a36"
+bg_alt = "#21222c"
+border = "#343746"
+border_strong = "#44475a"
+fg_subtle = "#525a7a"
+fg_muted = "#7080b5"
+fg_secondary = "#bfc3d9"
+fg = "#f8f8f2"
+fg_strong = "#fcfcf8"
+ink = "#ffffff"
+on_color = "#282a36"  # dark text on bright pastel fills
+# Role picks
+accent = "violet"
+brand = "magenta"
+pro = "aqua"
+success = "green"
+warning = "yellow"
+danger = "red"
+primary_button = "violet"
+primary_button_hover = "#d0b4ff"
+on_primary = "#282a36"
+hues = { red = "#ff5555", orange = "#ffb86c", yellow = "#f1fa8c", green = "#50fa7b", aqua = "#8be9fd", blue = "#6d8cf5", violet = "#bd93f9", magenta = "#ff79c6" }
+# Code blocks: font size (bare numbers = px) and optional unitless line height
+code_font_size = "13.5px"

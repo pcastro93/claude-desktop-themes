@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+
+# Claude Desktop CSS (Anthropic's), regenerate locally: see AGENTS.md
+css-dump/all.css
+css-dump/vars.css
+css-dump/vars.colors.css
+
+# macOS
+.DS_Store

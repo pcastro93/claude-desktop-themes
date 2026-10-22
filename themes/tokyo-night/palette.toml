@@ -1,0 +1,29 @@
+# Palette format: see ../../generator/PALETTE.md. Colors are "#rrggbb"; role picks may name a hue or ramp key instead.
+# Tokyo Night, "night" variant (https://github.com/folke/tokyonight.nvim). Blue is the signature accent.
+name = "Tokyo Night"
+mode = "dark"
+# Neutral ramp, page background -> strongest contrast (dark to light in a dark theme)
+bg = "#1a1b26"
+bg_alt = "#16161e"
+border = "#292e42"
+border_strong = "#3b4261"
+fg_subtle = "#565f89"
+fg_muted = "#7c84ae"
+fg_secondary = "#a9b1d6"
+fg = "#c0caf5"
+fg_strong = "#d5dcff"
+ink = "#eef1ff"
+on_color = "#1a1b26"  # dark text on bright pastel fills
+# Role picks
+accent = "blue"
+brand = "orange"
+pro = "violet"
+success = "green"
+warning = "yellow"
+danger = "red"
+primary_button = "blue"
+primary_button_hover = "#8fb2ff"
+on_primary = "#1a1b26"
+hues = { red = "#f7768e", orange = "#ff9e64", yellow = "#e0af68", green = "#9ece6a", aqua = "#73daca", blue = "#7aa2f7", violet = "#bb9af7", magenta = "#ff007c" }
+# Code blocks: font size (bare numbers = px) and optional unitless line height
+code_font_size = "13.5px"
