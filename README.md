@@ -2,17 +2,17 @@
 
 Color themes and code font size for the Claude Desktop app, applied from DevTools.
 
-| Theme | Folder | Snippet |
-|---|---|---|
-| Ayu Dark | [`themes/ayu-dark/`](themes/ayu-dark/) | [`apply-theme.js`](themes/ayu-dark/apply-theme.js) |
-| Catppuccin Mocha | [`themes/catppuccin-mocha/`](themes/catppuccin-mocha/) | [`apply-theme.js`](themes/catppuccin-mocha/apply-theme.js) |
-| Dracula | [`themes/dracula/`](themes/dracula/) | [`apply-theme.js`](themes/dracula/apply-theme.js) |
-| Monokai | [`themes/monokai/`](themes/monokai/) | [`apply-theme.js`](themes/monokai/apply-theme.js) |
-| One Dark Pro | [`themes/one-dark-pro/`](themes/one-dark-pro/) | [`apply-theme.js`](themes/one-dark-pro/apply-theme.js) |
-| Slack Dark (Slack-inspired, unofficial) | [`themes/slack-dark/`](themes/slack-dark/) | [`apply-theme.js`](themes/slack-dark/apply-theme.js) |
-| Solarized Dark | [`themes/solarized-dark/`](themes/solarized-dark/) | [`apply-theme.js`](themes/solarized-dark/apply-theme.js) |
-| Solarized Light | [`themes/solarized-light/`](themes/solarized-light/) | [`apply-theme.js`](themes/solarized-light/apply-theme.js) |
-| Tokyo Night | [`themes/tokyo-night/`](themes/tokyo-night/) | [`apply-theme.js`](themes/tokyo-night/apply-theme.js) |
+| Theme |
+|---|
+| [Ayu Dark](themes/ayu-dark/apply-theme.js) |
+| [Catppuccin Mocha](themes/catppuccin-mocha/apply-theme.js) |
+| [Dracula](themes/dracula/apply-theme.js) |
+| [Monokai](themes/monokai/apply-theme.js) |
+| [One Dark Pro](themes/one-dark-pro/apply-theme.js) |
+| [Slack Dark](themes/slack-dark/apply-theme.js) (Slack-inspired, unofficial) |
+| [Solarized Dark](themes/solarized-dark/apply-theme.js) |
+| [Solarized Light](themes/solarized-light/apply-theme.js) |
+| [Tokyo Night](themes/tokyo-night/apply-theme.js) |
 
 ## Screenshots
 
@@ -26,7 +26,7 @@ Color themes and code font size for the Claude Desktop app, applied from DevTool
 </p>
 
 ## Setup
-Do this once. The example uses Dracula; for another theme, swap `dracula` for its folder name from the table above.
+Do this once. The example uses Dracula; for another theme, swap `dracula` for its folder name under `themes/` (e.g. `tokyo-night`).
 
 1. **Enable developer mode:** in Claude Desktop, choose **Help → Troubleshooting → Enable Developer Mode**.
 2. **Open DevTools:** choose **Developer → Show Dev Tools**.
