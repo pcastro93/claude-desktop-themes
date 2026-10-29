@@ -29,3 +29,7 @@ shadow = "#11111b"        # crust
 hues = { red = "#f38ba8", orange = "#fab387", yellow = "#f9e2af", green = "#a6e3a1", aqua = "#89dceb", blue = "#89b4fa", violet = "#cba6f7", magenta = "#f5c2e7" }
 # Code blocks: font size (bare numbers = px) and optional unitless line height
 code_font_size = "13.5px"
+# The Catppuccin code theme paints blocks the same as the page; use mantle so they stand out
+[override]
+"--diffs-dark-bg" = "#181825"
+"--diffs-light-bg" = "#181825"
