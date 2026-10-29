@@ -26,3 +26,7 @@ on_primary = "bg"
 hues = { red = "#dc322f", orange = "#cb4b16", yellow = "#b58900", green = "#859900", aqua = "#2aa198", blue = "#268bd2", violet = "#6c71c4", magenta = "#d33682" }
 # Code blocks: font size (bare numbers = px) and optional unitless line height
 code_font_size = "13.5px"
+# The Solarized code theme paints blocks the same as the page; use base02 so they stand out
+[override]
+"--diffs-dark-bg" = "#073642"
+"--diffs-light-bg" = "#073642"
