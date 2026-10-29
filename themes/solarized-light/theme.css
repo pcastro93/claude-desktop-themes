@@ -540,5 +540,8 @@
   --msg-code-font-size: 13.5px !important;
   --prompt-text-code: 13.5px !important;
   --cds-leading-code: 1.5 !important;
+  /* Overrides (new variables) */
+  --diffs-light-bg: #eee8d5 !important;
+  --diffs-dark-bg: #eee8d5 !important;
 }
 pre, pre code, .code-block__code { font-size: 13.5px !important; }

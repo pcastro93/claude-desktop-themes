@@ -27,3 +27,6 @@ on_primary = "#282a36"
 hues = { red = "#ff5555", orange = "#ffb86c", yellow = "#f1fa8c", green = "#50fa7b", aqua = "#8be9fd", blue = "#6d8cf5", violet = "#bd93f9", magenta = "#ff79c6" }
 # Code blocks: font size (bare numbers = px) and optional unitless line height
 code_font_size = "13.5px"
+# The Dracula code theme paints blocks #282a36, identical to the page; use the darker panel shade so they stand out
+[override]
+"--diffs-dark-bg" = "#21222c"
