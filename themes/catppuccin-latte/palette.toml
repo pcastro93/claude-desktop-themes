@@ -1,0 +1,32 @@
+# Palette format: see ../../generator/PALETTE.md. Colors are "#rrggbb"; role picks may name a hue or ramp key instead.
+# Catppuccin Latte (https://catppuccin.com/palette). Neutrals: base/mantle/surface0/surface1/overlay0/overlay2/subtext1/text.
+# Catppuccin has no aqua/violet of its own: aqua = teal, violet = mauve, magenta = pink; crust (#dce0e8) is the lightest border.
+name = "Catppuccin Latte"
+mode = "light"
+# Neutral ramp, page background -> strongest contrast
+bg = "#eff1f5"            # base
+bg_alt = "#e6e9ef"        # mantle
+border = "#ccd0da"        # surface0
+border_strong = "#bcc0cc" # surface1
+fg_subtle = "#9ca0b0"     # overlay0
+fg_muted = "#7c7f93"      # overlay2
+fg_secondary = "#5c5f77"  # subtext1
+fg = "#4c4f69"            # text
+fg_strong = "#3c3f58"     # darker than text (not official)
+ink = "#232634"
+on_color = "#eff1f5"  # base: light text on saturated fills
+# Role picks
+accent = "violet"         # mauve
+brand = "orange"
+pro = "#7287fd"           # lavender
+success = "green"
+warning = "yellow"
+danger = "red"
+primary_button = "violet"
+primary_button_hover = "#7a2fe0"
+on_primary = "#eff1f5"
+shadow = "#4c4f69"        # text
+hues = { red = "#d20f39", orange = "#fe640b", yellow = "#df8e1d", green = "#40a02b", aqua = "#179299", blue = "#1e66f5", violet = "#8839ef", magenta = "#ea76cb" }
+override = { "--diffs-light-bg" = "#e6e9ef", "--diffs-dark-bg" = "#e6e9ef" }
+# Code blocks: font size (bare numbers = px) and optional unitless line height
+code_font_size = "13.5px"

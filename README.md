@@ -5,8 +5,11 @@ Color themes and code font size for the Claude Desktop app, applied from DevTool
 | Theme |
 |---|
 | [Ayu Dark](themes/ayu-dark/apply-theme.js) |
+| [Ayu Light](themes/ayu-light/apply-theme.js) |
+| [Catppuccin Latte](themes/catppuccin-latte/apply-theme.js) |
 | [Catppuccin Mocha](themes/catppuccin-mocha/apply-theme.js) |
 | [Dracula](themes/dracula/apply-theme.js) |
+| [GitHub Light](themes/github-light/apply-theme.js) |
 | [Monokai](themes/monokai/apply-theme.js) |
 | [One Dark Pro](themes/one-dark-pro/apply-theme.js) |
 | [Slack Dark](themes/slack-dark/apply-theme.js) (Slack-inspired, unofficial) |

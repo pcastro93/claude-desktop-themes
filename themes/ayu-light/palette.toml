@@ -1,0 +1,30 @@
+# Palette format: see ../../generator/PALETTE.md. Colors are "#rrggbb"; role picks may name a hue or ramp key instead.
+# Ayu Light (https://github.com/ayu-theme/ayu-colors). Neutrals are the UI/editor greys; magenta is not an official Ayu color.
+name = "Ayu Light"
+mode = "light"
+# Neutral ramp, page background -> strongest contrast
+bg = "#fcfcfc"
+bg_alt = "#f3f4f5"
+border = "#e7e8e9"
+border_strong = "#d9dadb"
+fg_subtle = "#b0b4b8"
+fg_muted = "#8a9199"
+fg_secondary = "#6c7580"
+fg = "#5c6166"
+fg_strong = "#3a3f45"
+ink = "#1f2328"
+on_color = "#1f2328"  # dark text: the official Ayu hues are too light for white text
+# Role picks
+accent = "blue"
+brand = "orange"
+pro = "violet"
+success = "green"
+warning = "yellow"
+danger = "red"
+primary_button = "fg_strong"
+primary_button_hover = "fg"
+on_primary = "bg"
+hues = { red = "#e65050", orange = "#fa8d3e", yellow = "#f2ae49", green = "#86b300", aqua = "#4cbf99", blue = "#399ee6", violet = "#a37acc", magenta = "#d1478f" }
+override = { "--diffs-light-bg" = "#f3f4f5", "--diffs-dark-bg" = "#f3f4f5" }
+# Code blocks: font size (bare numbers = px) and optional unitless line height
+code_font_size = "13.5px"

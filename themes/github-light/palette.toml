@@ -1,0 +1,31 @@
+# Palette format: see ../../generator/PALETTE.md. Colors are "#rrggbb"; role picks may name a hue or ramp key instead.
+# GitHub Light (Primer, https://primer.style/foundations/color). Primer has no aqua or magenta in its base scale; they use teal and pink.
+name = "GitHub Light"
+mode = "light"
+# Neutral ramp, page background -> strongest contrast
+bg = "#ffffff"
+bg_alt = "#f6f8fa"
+border = "#d8dee4"
+border_strong = "#d0d7de"
+fg_subtle = "#8c959f"
+fg_muted = "#6e7781"
+fg_secondary = "#57606a"
+fg = "#24292f"
+fg_strong = "#1f2328"
+ink = "#010409"
+on_color = "#ffffff"  # text on saturated fills (accent, danger, ...)
+# Role picks
+accent = "blue"
+brand = "orange"
+pro = "violet"
+success = "green"
+warning = "yellow"
+danger = "red"
+primary_button = "fg_strong"
+primary_button_hover = "fg"
+on_primary = "bg"
+hues = { red = "#cf222e", orange = "#bc4c00", yellow = "#9a6700", green = "#1a7f37", aqua = "#1b7c83", blue = "#0969da", violet = "#8250df", magenta = "#bf3989" }
+# Optional: exact per-variable values (hex is auto-converted for H S% L% triplet variables)
+override = { "--diffs-light-bg" = "#f6f8fa", "--diffs-dark-bg" = "#f6f8fa" }
+# Code blocks: font size (bare numbers = px) and optional unitless line height
+code_font_size = "13.5px"
