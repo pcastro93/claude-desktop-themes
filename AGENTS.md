@@ -48,6 +48,6 @@ cd css-dump && uv run extract_vars.py all.css --colors-only -o vars.colors.css  
 - **Value formats:** keep each variable's original format (hex, 8-digit hex, bare `H S% L%` triplets, `rgb()`), or the color breaks.
 - **`--cds-neutral-900`** is the base of every `--cds-alpha-*` overlay. Keep it pinned to `fg_strong`.
 - **Verify after changes:**
-  - Each `theme.css` parses with 0 errors (tinycss2). Every declaration is `!important`, and all are custom properties except the `font-size` in the code fallback rule that `code_font_size` adds.
+  - Each `theme.css` parses with 0 errors (tinycss2). Every declaration is `!important`, and all are custom properties except the `font-size` in the code fallback rule that `code_font_size` adds and the `::selection`/`::highlight` rules (plus the `.epitaxy-selection-band-layer` background and opacity) that `selection` adds (whose plain `::selection` rule is deliberately not `!important`, so the app's own transparent-selection rules still win).
   - `node --check` passes on each `apply-theme.js`, and its embedded string equals `theme.css`.
   - All themes still generate.

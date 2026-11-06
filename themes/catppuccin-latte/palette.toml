@@ -22,6 +22,7 @@ pro = "#7287fd"           # lavender
 success = "green"
 warning = "yellow"
 danger = "red"
+selection = "#7c7f9340"  # text selection: overlay2 at 25%, per the Catppuccin style guide; omit to keep the system highlight
 primary_button = "violet"
 primary_button_hover = "#7a2fe0"
 on_primary = "#eff1f5"

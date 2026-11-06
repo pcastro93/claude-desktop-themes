@@ -22,6 +22,7 @@ pro = "violet"
 success = "green"
 warning = "yellow"
 danger = "red"
+selection = "#49483e"  # text selection: Monokai selection; omit to keep the system highlight
 primary_button = "green"
 primary_button_hover = "#bff05a"
 on_primary = "#272822"

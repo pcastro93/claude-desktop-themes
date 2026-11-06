@@ -21,6 +21,7 @@ pro = "aqua"
 success = "green"
 warning = "yellow"
 danger = "red"
+selection = "#44475a"  # text selection: Dracula "Selection"; omit to keep the system highlight
 primary_button = "violet"
 primary_button_hover = "#d0b4ff"
 on_primary = "#282a36"

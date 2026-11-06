@@ -21,6 +21,7 @@ pro = "violet"
 success = "green"
 warning = "yellow"
 danger = "red"
+selection = "blue"  # text selection: accent at 25%; omit to keep the system highlight
 primary_button = "fg_strong"
 primary_button_hover = "fg"
 on_primary = "bg"

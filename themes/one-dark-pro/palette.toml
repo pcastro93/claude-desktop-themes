@@ -21,6 +21,7 @@ pro = "violet"
 success = "green"
 warning = "yellow"
 danger = "red"
+selection = "#3e4451"  # text selection: One Dark selection; omit to keep the system highlight
 primary_button = "blue"
 primary_button_hover = "#7ec0f5"
 on_primary = "#21252b"

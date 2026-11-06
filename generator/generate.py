@@ -242,6 +242,13 @@ if CODE_SIZE:
         add('Code typography', k, CODE_SIZE)
     add('Code typography', '--cds-leading-code', str(P.get('code_line_height', 1.5)))
 
+# ---- text selection (optional) -------------------------------------------------
+# selection = "#rrggbb[aa]" used as-is, or a hue/ramp name used at 25% alpha. Unset keeps the system highlight.
+SELECTION = None
+if 'selection' in P:
+    tok = P['selection'].strip()
+    SELECTION = resolve(tok) if tok.startswith('#') else alpha(resolve(tok), 25)
+
 # ---- explicit overrides --------------------------------------------------------
 TRIP_RE = re.compile(r'^[\d.]+ [\d.]+% [\d.]+%$')
 pending = dict(OVERRIDE); used = 0
@@ -271,6 +278,22 @@ for g, items in groups.items():
 lines.append('}')
 if CODE_SIZE:  # fallback for code blocks that hardcode a size instead of using the variables
     lines.append(f'pre, pre code, .code-block__code {{ font-size: {CODE_SIZE} !important; }}')
+if SELECTION:
+    # The app has no selection variable: native text gets the system highlight, and chat replies/plans paint their
+    # own via ::highlight(epitaxy-*) and .epitaxy-selection-band-layer divs (hiding the native one with
+    # [data-epitaxy-live-selection] ::selection). Text keeps
+    # its color (currentcolor). The plain ::selection rule is not !important and has zero-specificity exclusions so
+    # the app's own transparent-selection rules (unlayered ones by specificity, layered ones excluded here) still win.
+    hl = lambda *names: ', '.join(f'::highlight(epitaxy-{p}-selection{n})' for n in names for p in ('plan', 'reply'))
+    lines += [
+        '/* Text selection (palette `selection`) */',
+        f':where(:not(.ProseMirror-hideselection *, .\\[\\&\\:\\:selection\\]\\:bg-transparent))::selection {{ background-color: {SELECTION}; }}',
+        f'[data-epitaxy-live-selection] :is(img, diffs-container)::selection, {hl("", "-own-color", "-own-color-dark", "-recolor-builtin")} {{ background-color: {SELECTION} !important; }}',
+        # chat replies paint the selection as DOM "band" divs behind the text (some modes add opacity: 0.8)
+        f'.epitaxy-selection-band-layer > div, [data-epitaxy-band] > div {{ background-color: {SELECTION} !important; }}',
+        '.epitaxy-selection-band-layer, [data-epitaxy-band] { opacity: 1 !important; }',
+        f'[data-epitaxy-live-selection]::selection, [data-epitaxy-live-selection] ::selection, {hl("", "-own-color", "-own-color-dark", "-recolor-builtin", "-text", "-text-recolor-builtin")} {{ color: currentcolor !important; }}',
+    ]
 lines.append('')
 css = '\n'.join(lines)
 (pal_path.parent / 'theme.css').write_text(css)

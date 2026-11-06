@@ -22,6 +22,7 @@ pro = "violet"
 success = "green"
 warning = "yellow"
 danger = "red"
+selection = "blue"  # text selection: accent at 25%; omit to keep the system highlight
 primary_button = "#007a5a"  # Slack's green button
 primary_button_hover = "#148567"
 on_primary = "#ffffff"

@@ -542,3 +542,9 @@
   --cds-leading-code: 1.5 !important;
 }
 pre, pre code, .code-block__code { font-size: 13.5px !important; }
+/* Text selection (palette `selection`) */
+:where(:not(.ProseMirror-hideselection *, .\[\&\:\:selection\]\:bg-transparent))::selection { background-color: #49483e; }
+[data-epitaxy-live-selection] :is(img, diffs-container)::selection, ::highlight(epitaxy-plan-selection), ::highlight(epitaxy-reply-selection), ::highlight(epitaxy-plan-selection-own-color), ::highlight(epitaxy-reply-selection-own-color), ::highlight(epitaxy-plan-selection-own-color-dark), ::highlight(epitaxy-reply-selection-own-color-dark), ::highlight(epitaxy-plan-selection-recolor-builtin), ::highlight(epitaxy-reply-selection-recolor-builtin) { background-color: #49483e !important; }
+.epitaxy-selection-band-layer > div, [data-epitaxy-band] > div { background-color: #49483e !important; }
+.epitaxy-selection-band-layer, [data-epitaxy-band] { opacity: 1 !important; }
+[data-epitaxy-live-selection]::selection, [data-epitaxy-live-selection] ::selection, ::highlight(epitaxy-plan-selection), ::highlight(epitaxy-reply-selection), ::highlight(epitaxy-plan-selection-own-color), ::highlight(epitaxy-reply-selection-own-color), ::highlight(epitaxy-plan-selection-own-color-dark), ::highlight(epitaxy-reply-selection-own-color-dark), ::highlight(epitaxy-plan-selection-recolor-builtin), ::highlight(epitaxy-reply-selection-recolor-builtin), ::highlight(epitaxy-plan-selection-text), ::highlight(epitaxy-reply-selection-text), ::highlight(epitaxy-plan-selection-text-recolor-builtin), ::highlight(epitaxy-reply-selection-text-recolor-builtin) { color: currentcolor !important; }

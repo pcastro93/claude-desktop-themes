@@ -21,6 +21,7 @@ pro = "violet"
 success = "green"
 warning = "yellow"
 danger = "red"
+selection = "#515c7e4d"  # text selection: Tokyo Night editor selection; omit to keep the system highlight
 primary_button = "blue"
 primary_button_hover = "#8fb2ff"
 on_primary = "#1a1b26"

@@ -22,6 +22,7 @@ pro = "violet"
 success = "green"
 warning = "orange"
 danger = "red"
+selection = "blue"  # text selection: ayu blue at 25%; omit to keep the system highlight
 primary_button = "yellow"
 primary_button_hover = "#ffb454"
 on_primary = "#0b0e14"

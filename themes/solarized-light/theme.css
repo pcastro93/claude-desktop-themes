@@ -423,13 +423,13 @@
   --border-300: 194.5 14.1% 40.2% !important;
   --border-400: 194.5 14.1% 40.2% !important;
   /* Accents / brand / links */
-  --cds-fill-accent: #268bd2 !important;
-  --cds-fill-accent-hover: #1f78b6 !important;
-  --cds-text-accent: #1a6a9e !important;
+  --cds-fill-accent: #cb4b16 !important;
+  --cds-fill-accent-hover: #b4420f !important;
+  --cds-text-accent: #a13a0f !important;
   --cds-text-tint-blue: #1a6a9e !important;
-  --cds-border-accent: #268bd238 !important;
-  --cds-bg-accent: #268bd21f !important;
-  --cds-bg-accent-layer: #268bd20f !important;
+  --cds-border-accent: #cb4b1638 !important;
+  --cds-bg-accent: #cb4b161f !important;
+  --cds-bg-accent-layer: #cb4b160f !important;
   --cds-fill-primary: #073642 !important;
   --cds-fill-primary-hover: #586e75 !important;
   --cds-fill-primary-layer: #fdf6e326 !important;
@@ -444,10 +444,10 @@
   --brand-000: 18.5 84.6% 38.2% !important;
   --brand-100: 18.5 84.6% 38.2% !important;
   --brand-200: 17.6 80.4% 44.1% !important;
-  --accent-000: 203.6 71.7% 36.1% !important;
-  --accent-100: 204.8 69.4% 48.6% !important;
-  --accent-200: 204.8 69.4% 48.6% !important;
-  --accent-900: 140.0 15.3% 88.4% !important;
+  --accent-000: 17.7 83.0% 34.5% !important;
+  --accent-100: 17.6 80.4% 44.1% !important;
+  --accent-200: 17.6 80.4% 44.1% !important;
+  --accent-900: 28.8 73.5% 86.7% !important;
   --accent-pro-000: 236.3 33.9% 46.9% !important;
   --accent-pro-100: 236.6 42.7% 59.6% !important;
   --accent-pro-200: 236.1 44.3% 72.5% !important;
@@ -545,3 +545,9 @@
   --diffs-dark-bg: #eee8d5 !important;
 }
 pre, pre code, .code-block__code { font-size: 13.5px !important; }
+/* Text selection (palette `selection`) */
+:where(:not(.ProseMirror-hideselection *, .\[\&\:\:selection\]\:bg-transparent))::selection { background-color: #cb4b1640; }
+[data-epitaxy-live-selection] :is(img, diffs-container)::selection, ::highlight(epitaxy-plan-selection), ::highlight(epitaxy-reply-selection), ::highlight(epitaxy-plan-selection-own-color), ::highlight(epitaxy-reply-selection-own-color), ::highlight(epitaxy-plan-selection-own-color-dark), ::highlight(epitaxy-reply-selection-own-color-dark), ::highlight(epitaxy-plan-selection-recolor-builtin), ::highlight(epitaxy-reply-selection-recolor-builtin) { background-color: #cb4b1640 !important; }
+.epitaxy-selection-band-layer > div, [data-epitaxy-band] > div { background-color: #cb4b1640 !important; }
+.epitaxy-selection-band-layer, [data-epitaxy-band] { opacity: 1 !important; }
+[data-epitaxy-live-selection]::selection, [data-epitaxy-live-selection] ::selection, ::highlight(epitaxy-plan-selection), ::highlight(epitaxy-reply-selection), ::highlight(epitaxy-plan-selection-own-color), ::highlight(epitaxy-reply-selection-own-color), ::highlight(epitaxy-plan-selection-own-color-dark), ::highlight(epitaxy-reply-selection-own-color-dark), ::highlight(epitaxy-plan-selection-recolor-builtin), ::highlight(epitaxy-reply-selection-recolor-builtin), ::highlight(epitaxy-plan-selection-text), ::highlight(epitaxy-reply-selection-text), ::highlight(epitaxy-plan-selection-text-recolor-builtin), ::highlight(epitaxy-reply-selection-text-recolor-builtin) { color: currentcolor !important; }
