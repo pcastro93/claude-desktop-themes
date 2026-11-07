@@ -543,6 +543,7 @@
   /* Sidebar typography */
   --df-row-font: 13px !important;
   /* Overrides (new variables) */
+  --df-selected: #cb4b161a !important;
   --diffs-light-bg: #eee8d5 !important;
   --diffs-dark-bg: #eee8d5 !important;
 }
