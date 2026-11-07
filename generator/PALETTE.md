@@ -41,6 +41,7 @@ Colors are `"#rrggbb"`. Role picks accept a hue name, a ramp key or a hex.
 | `heading_sizes` | Optional inline table of chat-reply heading sizes, keys `h1`..`h6`, e.g. `{ h2 = "1.35em" }` (bare numbers mean px). Sets `--_prose-hN-size`, plus `--_prose-hN-leading: 1.3` for each heading given |
 | `sidebar_group_font_size` | Optional font size of sidebar group labels (project names), e.g. `"14px"` (bare numbers mean px). Sets `--df-group-font` on `[data-sidebar-group-label]` only, since row descriptions share that variable |
 | `sidebar_row_font_size` | Optional font size of sidebar rows (sessions, nav items), e.g. `"13px"`. Sets `--df-row-font` |
+| `sidebar_dot_size` | Optional size of the sidebar session status dot (unread, ready, running...), e.g. `"9px"` (bare numbers mean px; the app uses 6px). Adds a width/height rule for the sidebar's unread `[data-cds="Pulse"]` dot and `.status-dot` |
 | `selection` | Optional text-selection background: `"#rrggbb"`/`"#rrggbbaa"` as-is, or a hue/ramp name at 25% alpha. Adds `::selection`, `::highlight(epitaxy-*)` and selection-band-layer rules; selected text keeps its color. Unset keeps the system highlight |
 | `code_line_height` | Optional unitless code line height, used only with `code_font_size` (default `1.5`) |
 

@@ -248,6 +248,8 @@ if CODE_SIZE:
 ROW_FONT = px(P['sidebar_row_font_size']) if 'sidebar_row_font_size' in P else None
 GROUP_FONT = px(P['sidebar_group_font_size']) if 'sidebar_group_font_size' in P else None
 if ROW_FONT: add('Sidebar typography', '--df-row-font', ROW_FONT)
+# sidebar_dot_size: the session status dot (unread Pulse, .status-dot states), fixed at 6px with no variable
+DOT_SIZE = px(P['sidebar_dot_size']) if 'sidebar_dot_size' in P else None
 
 # ---- chat heading sizes (optional) ---------------------------------------------
 # heading_sizes = { h1 = "1.5em", ... } (bare numbers mean px). Chat replies are [data-cds="Prose"], whose headings
@@ -295,6 +297,8 @@ for g, items in groups.items():
 lines.append('}')
 if CODE_SIZE:  # fallback for code blocks that hardcode a size instead of using the variables
     lines.append(f'pre, pre code, .code-block__code {{ font-size: {CODE_SIZE} !important; }}')
+if DOT_SIZE:  # unread = Pulse in the row decoration slot; other states use .status-dot (skip ones sized inline)
+    lines.append(f'.dframe-sidebar :is([data-row-decoration] [data-cds="Pulse"], .status-dot:not([style*="width"])) {{ width: {DOT_SIZE} !important; height: {DOT_SIZE} !important; }}')
 if GROUP_FONT:  # scoped: the app redeclares it on the label itself, and row descriptions share the variable
     lines.append(f'[data-sidebar-group-label], [data-sidebar-group-label] * {{ --df-group-font: {GROUP_FONT} !important; }}')
 if SELECTION:
