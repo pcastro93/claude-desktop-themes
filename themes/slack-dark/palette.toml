@@ -32,3 +32,5 @@ code_font_size = "13.5px"
 # Sidebar: project (group) labels bigger than the session rows under them (bare numbers = px)
 sidebar_group_font_size = "14px"
 sidebar_row_font_size = "13px"
+# Chat reply headings, one step apart and never below body size (the app makes h3-h6 all 1em); bare numbers = px
+heading_sizes = { h1 = "1.75em", h2 = "1.6em", h3 = "1.4em", h4 = "1.25em", h5 = "1.15em", h6 = "1.05em" }

@@ -249,6 +249,16 @@ ROW_FONT = px(P['sidebar_row_font_size']) if 'sidebar_row_font_size' in P else N
 GROUP_FONT = px(P['sidebar_group_font_size']) if 'sidebar_group_font_size' in P else None
 if ROW_FONT: add('Sidebar typography', '--df-row-font', ROW_FONT)
 
+# ---- chat heading sizes (optional) ---------------------------------------------
+# heading_sizes = { h1 = "1.5em", ... } (bare numbers mean px). Chat replies are [data-cds="Prose"], whose headings
+# use --_prose-hN-size / --_prose-hN-leading; in replies the app sets h2 = h1 and h3..h6 = 1em. Each size given also
+# gets a unitless 1.3 leading so bigger headings don't keep the body's line height.
+HEADINGS = {k: px(v) for k, v in P.get('heading_sizes', {}).items()}
+if set(HEADINGS) - {f'h{i}' for i in range(1, 7)}: sys.exit(f'heading_sizes keys must be h1..h6, got {sorted(HEADINGS)}')
+for k in sorted(HEADINGS):
+    add('Chat heading sizes', f'--_prose-{k}-size', HEADINGS[k])
+    add('Chat heading sizes', f'--_prose-{k}-leading', '1.3')
+
 # ---- text selection (optional) -------------------------------------------------
 # selection = "#rrggbb[aa]" used as-is, or a hue/ramp name used at 25% alpha. Unset keeps the system highlight.
 SELECTION = None

@@ -38,6 +38,7 @@ Colors are `"#rrggbb"`. Role picks accept a hue name, a ramp key or a hex.
 | `hue_hover`, `hue_text` | Optional inline tables with exact hover-fill / readable-text colors per hue (default: derived by mixing toward `ink`) |
 | `override` | Optional inline table `"--css-var" = value` for exact per-variable values (hex is auto-converted for `H S% L%` variables) |
 | `code_font_size` | Optional code font size, e.g. `"13.5px"` (bare numbers mean px). Sets `--cds-font-size-code`, `--msg-code-font-size`, `--prompt-text-code` and adds a `pre, pre code, .code-block__code` fallback rule |
+| `heading_sizes` | Optional inline table of chat-reply heading sizes, keys `h1`..`h6`, e.g. `{ h2 = "1.35em" }` (bare numbers mean px). Sets `--_prose-hN-size`, plus `--_prose-hN-leading: 1.3` for each heading given |
 | `sidebar_group_font_size` | Optional font size of sidebar group labels (project names), e.g. `"14px"` (bare numbers mean px). Sets `--df-group-font` on `[data-sidebar-group-label]` only, since row descriptions share that variable |
 | `sidebar_row_font_size` | Optional font size of sidebar rows (sessions, nav items), e.g. `"13px"`. Sets `--df-row-font` |
 | `selection` | Optional text-selection background: `"#rrggbb"`/`"#rrggbbaa"` as-is, or a hue/ramp name at 25% alpha. Adds `::selection`, `::highlight(epitaxy-*)` and selection-band-layer rules; selected text keeps its color. Unset keeps the system highlight |
