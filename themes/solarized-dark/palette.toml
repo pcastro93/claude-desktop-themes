@@ -14,13 +14,13 @@ fg_strong = "#eee8d5"
 ink = "#fdf6e3"
 on_color = "#fdf6e3"  # text on saturated fills (accent, danger, ...)
 # Role picks
-accent = "orange"  # matches Obsidian's Solarized accent (202, 73, 22)
+accent = "aqua"  # Solarized cyan
 brand = "orange"
 pro = "violet"
 success = "green"
 warning = "yellow"
 danger = "red"
-selection = "orange"  # text selection: accent at 25% (Obsidian-style); omit to keep the system highlight
+selection = "aqua"  # text selection: accent at 25%; omit to keep the system highlight
 primary_button = "fg_strong"
 primary_button_hover = "#cecfc3"
 on_primary = "bg"
