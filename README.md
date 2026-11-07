@@ -16,14 +16,16 @@ Color themes and code font size for the Claude Desktop app, applied from DevTool
 
 ## Screenshots
 
-<p align="center">
-  <a href="docs/screenshots/preview_1.png"><img src="docs/screenshots/preview_1.png" alt="Claude Desktop main window with a theme applied: sidebar, context usage panel and the input menu" width="48%"></a>
-  <a href="docs/screenshots/preview_2.png"><img src="docs/screenshots/preview_2.png" alt="Claude Desktop settings page with a theme applied" width="48%"></a>
-</p>
-
-<p align="center">
-  <img src="docs/screenshots/preview_3.png" alt="Trust this workspace dialog with a theme applied" width="400">
-</p>
+<table>
+  <tr>
+    <td align="center"><a href="docs/screenshots/solarized-dark.png"><img src="docs/screenshots/solarized-dark.png" alt="Claude Desktop with the Solarized Dark theme applied"></a><br><b>Solarized Dark</b></td>
+    <td align="center"><a href="docs/screenshots/solarized-light.png"><img src="docs/screenshots/solarized-light.png" alt="Claude Desktop with the Solarized Light theme applied"></a><br><b>Solarized Light</b></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="docs/screenshots/catppuccin-mocha.png"><img src="docs/screenshots/catppuccin-mocha.png" alt="Claude Desktop with the Catppuccin Mocha theme applied"></a><br><b>Catppuccin Mocha</b></td>
+    <td align="center"><a href="docs/screenshots/one-dark-pro.png"><img src="docs/screenshots/one-dark-pro.png" alt="Claude Desktop with the One Dark Pro theme applied"></a><br><b>One Dark Pro</b></td>
+  </tr>
+</table>
 
 ## Setup
 Do this once. The example uses Dracula; for another theme, swap `dracula` for its folder name under `themes/` (e.g. `tokyo-night`).
