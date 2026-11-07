@@ -32,3 +32,6 @@ hue_text = { red = "#b02524", orange = "#a13a0f", yellow = "#7d5e00", green = "#
 override = { "--accent-pro-200" = "#9a9ed8", "--cds-fizzy-lake-color-card-hover" = "#e8e1cb", "--cds-gray-850" = "#00303b", "--danger-000" = "#a02320", "--diffs-light-bg" = "#eee8d5", "--diffs-dark-bg" = "#eee8d5", "--df-z4" = "#c9c4ae", "--pictogram-400" = "#f6efdb", "--warning-000" = "#6b5000" }
 # Code blocks: font size (bare numbers = px) and optional unitless line height
 code_font_size = "13.5px"
+# Sidebar: project (group) labels bigger than the session rows under them (bare numbers = px)
+sidebar_group_font_size = "14px"
+sidebar_row_font_size = "13px"

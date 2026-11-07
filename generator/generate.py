@@ -242,6 +242,13 @@ if CODE_SIZE:
         add('Code typography', k, CODE_SIZE)
     add('Code typography', '--cds-leading-code', str(P.get('code_line_height', 1.5)))
 
+# ---- sidebar typography (optional) ---------------------------------------------
+# sidebar_row_font_size sets --df-row-font (session rows, nav pills); sidebar_group_font_size sets --df-group-font
+# only on group labels (project names), since the app also uses that variable for row descriptions.
+ROW_FONT = px(P['sidebar_row_font_size']) if 'sidebar_row_font_size' in P else None
+GROUP_FONT = px(P['sidebar_group_font_size']) if 'sidebar_group_font_size' in P else None
+if ROW_FONT: add('Sidebar typography', '--df-row-font', ROW_FONT)
+
 # ---- text selection (optional) -------------------------------------------------
 # selection = "#rrggbb[aa]" used as-is, or a hue/ramp name used at 25% alpha. Unset keeps the system highlight.
 SELECTION = None
@@ -278,6 +285,8 @@ for g, items in groups.items():
 lines.append('}')
 if CODE_SIZE:  # fallback for code blocks that hardcode a size instead of using the variables
     lines.append(f'pre, pre code, .code-block__code {{ font-size: {CODE_SIZE} !important; }}')
+if GROUP_FONT:  # scoped: the app redeclares it on the label itself, and row descriptions share the variable
+    lines.append(f'[data-sidebar-group-label], [data-sidebar-group-label] * {{ --df-group-font: {GROUP_FONT} !important; }}')
 if SELECTION:
     # The app has no selection variable: native text gets the system highlight, and chat replies/plans paint their
     # own via ::highlight(epitaxy-*) and .epitaxy-selection-band-layer divs (hiding the native one with

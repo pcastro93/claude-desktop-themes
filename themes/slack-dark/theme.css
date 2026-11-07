@@ -540,8 +540,11 @@
   --msg-code-font-size: 13.5px !important;
   --prompt-text-code: 13.5px !important;
   --cds-leading-code: 1.5 !important;
+  /* Sidebar typography */
+  --df-row-font: 13px !important;
 }
 pre, pre code, .code-block__code { font-size: 13.5px !important; }
+[data-sidebar-group-label], [data-sidebar-group-label] * { --df-group-font: 14px !important; }
 /* Text selection (palette `selection`) */
 :where(:not(.ProseMirror-hideselection *, .\[\&\:\:selection\]\:bg-transparent))::selection { background-color: #1d9bd140; }
 [data-epitaxy-live-selection] :is(img, diffs-container)::selection, ::highlight(epitaxy-plan-selection), ::highlight(epitaxy-reply-selection), ::highlight(epitaxy-plan-selection-own-color), ::highlight(epitaxy-reply-selection-own-color), ::highlight(epitaxy-plan-selection-own-color-dark), ::highlight(epitaxy-reply-selection-own-color-dark), ::highlight(epitaxy-plan-selection-recolor-builtin), ::highlight(epitaxy-reply-selection-recolor-builtin) { background-color: #1d9bd140 !important; }

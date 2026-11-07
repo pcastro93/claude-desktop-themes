@@ -29,3 +29,6 @@ on_primary = "#272822"
 hues = { red = "#ff5f57", orange = "#fd971f", yellow = "#e6db74", green = "#a6e22e", aqua = "#66d9ef", blue = "#5f9df0", violet = "#ae81ff", magenta = "#f92672" }
 # Code blocks: font size (bare numbers = px) and optional unitless line height
 code_font_size = "13.5px"
+# Sidebar: project (group) labels bigger than the session rows under them (bare numbers = px)
+sidebar_group_font_size = "14px"
+sidebar_row_font_size = "13px"
