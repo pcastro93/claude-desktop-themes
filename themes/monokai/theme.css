@@ -272,20 +272,32 @@
   --cds-gray-850: #fffffe !important;
   --cds-gray-900: #ffffff !important;
   /* Palette: HSL triplet scales (--cds-hsl-*) */
+  --cds-hsl-gray-100: 80.0 5.1% 11.6% !important;
+  --cds-hsl-gray-810: 60.0 40.0% 98.0% !important;
+  --cds-hsl-blue-350: 213.5 37.1% 45.5% !important;
+  --cds-hsl-blue-500: 214.1 53.2% 56.5% !important;
   --cds-hsl-gray-0: 70.0 8.1% 14.5% !important;
+  --cds-hsl-gray-10: 70.0 8.1% 14.5% !important;
   --cds-hsl-gray-20: 70.0 8.3% 14.1% !important;
+  --cds-hsl-gray-30: 72.0 7.0% 13.9% !important;
   --cds-hsl-gray-40: 72.0 7.2% 13.5% !important;
   --cds-hsl-gray-50: 72.0 7.5% 13.1% !important;
+  --cds-hsl-gray-60: 75.0 6.1% 12.9% !important;
   --cds-hsl-gray-80: 75.0 6.5% 12.2% !important;
-  --cds-hsl-gray-100: 80.0 5.1% 11.6% !important;
+  --cds-hsl-gray-90: 80.0 4.9% 12.0% !important;
+  --cds-hsl-gray-150: 72.0 6.5% 15.1% !important;
   --cds-hsl-gray-200: 60.0 6.2% 18.8% !important;
+  --cds-hsl-gray-300: 54.5 8.3% 26.1% !important;
   --cds-hsl-gray-350: 60.0 8.6% 29.6% !important;
   --cds-hsl-gray-450: 60.0 6.2% 55.7% !important;
+  --cds-hsl-gray-500: 60.0 11.9% 78.6% !important;
+  --cds-hsl-gray-600: 60.0 30.0% 96.1% !important;
   --cds-hsl-gray-650: 60.0 29.4% 96.7% !important;
   --cds-hsl-gray-700: 60.0 33.3% 97.1% !important;
   --cds-hsl-gray-750: 60.0 33.3% 97.6% !important;
   --cds-hsl-gray-800: 60.0 40.0% 98.0% !important;
-  --cds-hsl-gray-810: 60.0 40.0% 98.0% !important;
+  --cds-hsl-gray-830: 60.0 50.0% 98.4% !important;
+  --cds-hsl-gray-840: 60.0 42.9% 98.6% !important;
   --cds-hsl-gray-850: 60.0 42.9% 98.6% !important;
   --cds-hsl-gray-860: 60.0 33.3% 98.8% !important;
   --cds-hsl-gray-870: 60.0 33.3% 98.8% !important;
@@ -312,8 +324,6 @@
   --cds-hsl-green-750: 80.3 75.6% 82.4% !important;
   --cds-hsl-blue-100: 210.0 21.2% 25.9% !important;
   --cds-hsl-blue-200: 212.4 29.4% 33.3% !important;
-  --cds-hsl-blue-350: 213.5 37.1% 45.5% !important;
-  --cds-hsl-blue-500: 214.1 53.2% 56.5% !important;
   --cds-hsl-blue-600: 214.2 72.5% 62.9% !important;
   --cds-hsl-blue-750: 214.5 82.5% 77.6% !important;
   --cds-hsl-violet-100: 264.0 12.2% 24.1% !important;
@@ -323,16 +333,6 @@
   --cds-hsl-violet-450: 261.9 26.8% 46.1% !important;
   --cds-hsl-violet-600: 261.3 42.9% 58.8% !important;
   --cds-hsl-violet-750: 261.5 92.5% 73.9% !important;
-  --cds-hsl-gray-10: 70.0 8.1% 14.5% !important;
-  --cds-hsl-gray-30: 72.0 7.0% 13.9% !important;
-  --cds-hsl-gray-60: 75.0 6.1% 12.9% !important;
-  --cds-hsl-gray-90: 80.0 4.9% 12.0% !important;
-  --cds-hsl-gray-150: 72.0 6.5% 15.1% !important;
-  --cds-hsl-gray-300: 54.5 8.3% 26.1% !important;
-  --cds-hsl-gray-500: 60.0 11.9% 78.6% !important;
-  --cds-hsl-gray-600: 60.0 30.0% 96.1% !important;
-  --cds-hsl-gray-830: 60.0 50.0% 98.4% !important;
-  --cds-hsl-gray-840: 60.0 42.9% 98.6% !important;
   --cds-hsl-red-400: 4.4 44.6% 47.5% !important;
   --cds-hsl-clay: 32.4 98.2% 55.7% !important;
   --cds-hsl-clay-emphasized: 32.4 98.0% 60.0% !important;
@@ -556,6 +556,8 @@
   --_prose-h6-size: 1.05em !important;
   --_prose-h6-leading: 1.3 !important;
 }
+/* macOS sidebar vibrancy: paint the sidebar solid instead of letting the native material show through */
+html[data-sidebar-vibrancy] .dframe-root[data-variant="web"]:not([data-collapsed]) .dframe-sidebar { background-color: var(--df-web-sidebar-bg) !important; }
 pre, pre code, .code-block__code { font-size: 13.5px !important; }
 .dframe-sidebar :is([data-row-decoration] [data-cds="Pulse"], .status-dot:not([style*="width"])) { width: 8px !important; height: 8px !important; }
 [data-sidebar-group-label], [data-sidebar-group-label] * { --df-group-font: 14px !important; }

@@ -2,6 +2,7 @@
 // Run in the Claude Desktop DevTools Console, or save it as a Sources > Snippets entry.
 const parts = [];
 for (const s of [...document.styleSheets, ...document.adoptedStyleSheets]) {
+  if (s.ownerNode?.id === 'custom-theme') continue; // skip an applied theme, or its overrides end up in the dump
   const label = `/* ${s.href || 'inline <style>'} */\n`;
   try {
     parts.push(label + [...s.cssRules].map(r => r.cssText).join('\n'));

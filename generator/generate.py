@@ -80,14 +80,17 @@ BG, ALT, INK = R['bg'], R['bg_alt'], R['ink']
 LIGHTEST, DARKEST = (INK, BG) if DARK else (BG, INK)
 
 # ---- parse originals -------------------------------------------------------
+# Found by selector, not line number, since rule order differs between dumps (app versions, macOS vs Linux).
+# Hex scales: only the fizzy-lake "color" rules (the look the app runs with). Triplets: every rule, later ones winning.
 orig_hex, orig_trip = {}, {}
-for ln in SRC[194:462]:
-    m = re.match(r'\s*(--cds-(?:gray|red|orange|yellow|green|aqua|blue|violet|magenta)-\d+): (#[0-9a-f]{3,6});', ln)
-    if m: orig_hex[m[1]] = m[2]
-for ln in SRC[75:131] + SRC[837:895]:
-    m = re.match(r'\s*(--cds-hsl-[a-z]+-\d+): ([\d.]+) ([\d.]+)% ([\d.]+)%;', ln)
-    if m: orig_trip[m[1]] = tuple(map(float, m.groups()[1:]))
-assert orig_hex and orig_trip, 'could not parse scales from vars file (line ranges changed?)'
+HEX_RE = r'\s*(--cds-(?:gray|red|orange|yellow|green|aqua|blue|violet|magenta)-\d+): (#[0-9a-f]{3,6});'
+TRIP_SRC_RE = r'\s*(--cds-hsl-[a-z]+-\d+): ([\d.]+) ([\d.]+)% ([\d.]+)%;'
+for sel, body in re.findall(r'([^{}]+)\{([^{}]*)\}', '\n'.join(SRC)):
+    fizzy = 'data-cds-fizzy-lake~="color"' in sel
+    for ln in body.split('\n'):
+        if fizzy and (m := re.match(HEX_RE, ln)): orig_hex[m[1]] = m[2]
+        if m := re.match(TRIP_SRC_RE, ln): orig_trip[m[1]] = tuple(map(float, m.groups()[1:]))
+assert orig_hex and orig_trip, 'could not parse the --cds-* color scales from the vars file'
 def full(h):
     h = h.lstrip('#'); return '#' + (''.join(c * 2 for c in h) if len(h) == 3 else h)
 
@@ -295,6 +298,11 @@ for g, items in groups.items():
         lines.append(f'  {k}: {v} !important;')
     counts[g] = n
 lines.append('}')
+# macOS: html[data-sidebar-vibrancy] makes the body and sidebar (see-through) so the native window vibrancy shows,
+# tinting it with only a share of --df-web-sidebar-bg (0% under some settings, transparent with
+# [data-sidebar-tint-native]). Paint the sidebar solid so it takes the theme. No-op on Linux/Windows.
+lines += ['/* macOS sidebar vibrancy: paint the sidebar solid instead of letting the native material show through */',
+          'html[data-sidebar-vibrancy] .dframe-root[data-variant="web"]:not([data-collapsed]) .dframe-sidebar { background-color: var(--df-web-sidebar-bg) !important; }']
 if CODE_SIZE:  # fallback for code blocks that hardcode a size instead of using the variables
     lines.append(f'pre, pre code, .code-block__code {{ font-size: {CODE_SIZE} !important; }}')
 if DOT_SIZE:  # unread = Pulse in the row decoration slot; other states use .status-dot (skip ones sized inline)
